@@ -1,0 +1,768 @@
+ERROR - 2025-08-31 08:30:23 --> mysqli_sql_exception: Unknown column 'name' in 'field list' in C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\app\Controllers\Auth.php(28): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(933): App\Controllers\Auth->create()
+#10 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-08-31 08:30:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'name' in 'field list'
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (:name:, :email:, :role:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Auth.php(28): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-31 08:30:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:30:23\', \'2025-08-31 08:30:23\', \'$2y$10$9z5vYiFXgMRJZepbhFm01OteLjAGXNdpIldrLVtLf794kOE05oEKS\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:30:23\', \'2025-08-31 08:30:23\', \'$2y$10$9z5vYiFXgMRJZepbhFm01OteLjAGXNdpIldrLVtLf794kOE05oEKS\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (:name:, :email:, :role:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Auth.php(28): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-31 08:30:23 --> [Caused by] mysqli_sql_exception: Unknown column 'name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:30:23\', \'2025-08-31 08:30:23\', \'$2y$10$9z5vYiFXgMRJZepbhFm01OteLjAGXNdpIldrLVtLf794kOE05oEKS\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:30:23\', \'2025-08-31 08:30:23\', \'$2y$10$9z5vYiFXgMRJZepbhFm01OteLjAGXNdpIldrLVtLf794kOE05oEKS\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:30:23\', \'2025-08-31 08:30:23\', \'$2y$10$9z5vYiFXgMRJZepbhFm01OteLjAGXNdpIldrLVtLf794kOE05oEKS\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (:name:, :email:, :role:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Auth.php(28): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-31 08:32:13 --> mysqli_sql_exception: Unknown column 'name' in 'field list' in C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\app\Controllers\Auth.php(28): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(933): App\Controllers\Auth->create()
+#10 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-08-31 08:32:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'name' in 'field list'
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (:name:, :email:, :role:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Auth.php(28): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-31 08:32:13 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:32:13\', \'2025-08-31 08:32:13\', \'$2y$10$LGb0eWf/PoMFfcJPcl/rk.w7JPOpQih8OQHRP5FWunMnSh5S9A1Qy\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:32:13\', \'2025-08-31 08:32:13\', \'$2y$10$LGb0eWf/PoMFfcJPcl/rk.w7JPOpQih8OQHRP5FWunMnSh5S9A1Qy\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (:name:, :email:, :role:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Auth.php(28): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-31 08:32:13 --> [Caused by] mysqli_sql_exception: Unknown column 'name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:32:13\', \'2025-08-31 08:32:13\', \'$2y$10$LGb0eWf/PoMFfcJPcl/rk.w7JPOpQih8OQHRP5FWunMnSh5S9A1Qy\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:32:13\', \'2025-08-31 08:32:13\', \'$2y$10$LGb0eWf/PoMFfcJPcl/rk.w7JPOpQih8OQHRP5FWunMnSh5S9A1Qy\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:32:13\', \'2025-08-31 08:32:13\', \'$2y$10$LGb0eWf/PoMFfcJPcl/rk.w7JPOpQih8OQHRP5FWunMnSh5S9A1Qy\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (:name:, :email:, :role:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Auth.php(28): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-31 08:32:16 --> mysqli_sql_exception: Unknown column 'name' in 'field list' in C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\app\Controllers\Auth.php(28): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(933): App\Controllers\Auth->create()
+#10 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-08-31 08:32:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'name' in 'field list'
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (:name:, :email:, :role:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Auth.php(28): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-31 08:32:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:32:16\', \'2025-08-31 08:32:16\', \'$2y$10$6GBVLk.TZQpb3c6dN4DikO9HQQThH.0gJhmoeacoKE6PPmnG2cReq\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:32:16\', \'2025-08-31 08:32:16\', \'$2y$10$6GBVLk.TZQpb3c6dN4DikO9HQQThH.0gJhmoeacoKE6PPmnG2cReq\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (:name:, :email:, :role:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Auth.php(28): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-31 08:32:16 --> [Caused by] mysqli_sql_exception: Unknown column 'name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:32:16\', \'2025-08-31 08:32:16\', \'$2y$10$6GBVLk.TZQpb3c6dN4DikO9HQQThH.0gJhmoeacoKE6PPmnG2cReq\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:32:16\', \'2025-08-31 08:32:16\', \'$2y$10$6GBVLk.TZQpb3c6dN4DikO9HQQThH.0gJhmoeacoKE6PPmnG2cReq\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:32:16\', \'2025-08-31 08:32:16\', \'$2y$10$6GBVLk.TZQpb3c6dN4DikO9HQQThH.0gJhmoeacoKE6PPmnG2cReq\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (:name:, :email:, :role:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Auth.php(28): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-31 08:35:41 --> mysqli_sql_exception: Unknown column 'name' in 'field list' in C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\app\Controllers\Auth.php(28): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(933): App\Controllers\Auth->create()
+#10 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-08-31 08:35:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'name' in 'field list'
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (:name:, :email:, :role:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Auth.php(28): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-31 08:35:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:35:41\', \'2025-08-31 08:35:41\', \'$2y$10$kn9/OtI12zCp8lBYhJT0cenBIeswUUTQ5ZxmCKkYPoGqJZskWa8Em\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:35:41\', \'2025-08-31 08:35:41\', \'$2y$10$kn9/OtI12zCp8lBYhJT0cenBIeswUUTQ5ZxmCKkYPoGqJZskWa8Em\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (:name:, :email:, :role:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Auth.php(28): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-31 08:35:41 --> [Caused by] mysqli_sql_exception: Unknown column 'name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:35:41\', \'2025-08-31 08:35:41\', \'$2y$10$kn9/OtI12zCp8lBYhJT0cenBIeswUUTQ5ZxmCKkYPoGqJZskWa8Em\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:35:41\', \'2025-08-31 08:35:41\', \'$2y$10$kn9/OtI12zCp8lBYhJT0cenBIeswUUTQ5ZxmCKkYPoGqJZskWa8Em\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:35:41\', \'2025-08-31 08:35:41\', \'$2y$10$kn9/OtI12zCp8lBYhJT0cenBIeswUUTQ5ZxmCKkYPoGqJZskWa8Em\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (:name:, :email:, :role:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Auth.php(28): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-31 08:40:51 --> mysqli_sql_exception: Unknown column 'name' in 'field list' in C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\app\Controllers\Auth.php(28): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(933): App\Controllers\Auth->create()
+#10 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-08-31 08:40:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'name' in 'field list'
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (:name:, :email:, :role:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Auth.php(28): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-31 08:40:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:40:50\', \'2025-08-31 08:40:50\', \'$2y$10$PJaIR9hJXE7L8w/7LeI78e43zwqWv6pOG5tMvCzujEJGo16QROro.\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:40:50\', \'2025-08-31 08:40:50\', \'$2y$10$PJaIR9hJXE7L8w/7LeI78e43zwqWv6pOG5tMvCzujEJGo16QROro.\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (:name:, :email:, :role:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Auth.php(28): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-31 08:40:51 --> [Caused by] mysqli_sql_exception: Unknown column 'name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:40:50\', \'2025-08-31 08:40:50\', \'$2y$10$PJaIR9hJXE7L8w/7LeI78e43zwqWv6pOG5tMvCzujEJGo16QROro.\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:40:50\', \'2025-08-31 08:40:50\', \'$2y$10$PJaIR9hJXE7L8w/7LeI78e43zwqWv6pOG5tMvCzujEJGo16QROro.\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:40:50\', \'2025-08-31 08:40:50\', \'$2y$10$PJaIR9hJXE7L8w/7LeI78e43zwqWv6pOG5tMvCzujEJGo16QROro.\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (:name:, :email:, :role:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Auth.php(28): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-31 08:43:28 --> mysqli_sql_exception: Unknown column 'name' in 'field list' in C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\app\Controllers\Auth.php(29): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(933): App\Controllers\Auth->create()
+#10 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-08-31 08:43:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'name' in 'field list'
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (:name:, :email:, :role:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Auth.php(29): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-31 08:43:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:43:28\', \'2025-08-31 08:43:28\', \'$2y$10$1FC6FvfcBnEypECPuh/YDeROfPSOJx9aShj52v2bxWGwRZt4ojAsy\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:43:28\', \'2025-08-31 08:43:28\', \'$2y$10$1FC6FvfcBnEypECPuh/YDeROfPSOJx9aShj52v2bxWGwRZt4ojAsy\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (:name:, :email:, :role:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Auth.php(29): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-31 08:43:28 --> [Caused by] mysqli_sql_exception: Unknown column 'name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:43:28\', \'2025-08-31 08:43:28\', \'$2y$10$1FC6FvfcBnEypECPuh/YDeROfPSOJx9aShj52v2bxWGwRZt4ojAsy\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:43:28\', \'2025-08-31 08:43:28\', \'$2y$10$1FC6FvfcBnEypECPuh/YDeROfPSOJx9aShj52v2bxWGwRZt4ojAsy\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:43:28\', \'2025-08-31 08:43:28\', \'$2y$10$1FC6FvfcBnEypECPuh/YDeROfPSOJx9aShj52v2bxWGwRZt4ojAsy\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (:name:, :email:, :role:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Auth.php(29): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-31 08:44:05 --> mysqli_sql_exception: Unknown column 'name' in 'field list' in C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\app\Controllers\Auth.php(30): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(933): App\Controllers\Auth->create()
+#10 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-08-31 08:44:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'name' in 'field list'
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (:name:, :email:, :role:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Auth.php(30): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-31 08:44:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:44:05\', \'2025-08-31 08:44:05\', \'$2y$10$lYchuooPaiiELpBI0vNxveqRAbqGr2UUwrAboKhwg5xrlk7cyfIau\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:44:05\', \'2025-08-31 08:44:05\', \'$2y$10$lYchuooPaiiELpBI0vNxveqRAbqGr2UUwrAboKhwg5xrlk7cyfIau\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (:name:, :email:, :role:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Auth.php(30): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-31 08:44:05 --> [Caused by] mysqli_sql_exception: Unknown column 'name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:44:05\', \'2025-08-31 08:44:05\', \'$2y$10$lYchuooPaiiELpBI0vNxveqRAbqGr2UUwrAboKhwg5xrlk7cyfIau\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:44:05\', \'2025-08-31 08:44:05\', \'$2y$10$lYchuooPaiiELpBI0vNxveqRAbqGr2UUwrAboKhwg5xrlk7cyfIau\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', \'user\', \'2025-08-31 08:44:05\', \'2025-08-31 08:44:05\', \'$2y$10$lYchuooPaiiELpBI0vNxveqRAbqGr2UUwrAboKhwg5xrlk7cyfIau\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (:name:, :email:, :role:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Auth.php(30): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-08-31 08:45:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-31 08:45:44 --> CSRF token verified.
+DEBUG - 2025-08-31 08:49:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-31 08:49:33 --> CSRF token verified.
+ERROR - 2025-08-31 08:49:33 --> mysqli_sql_exception: Unknown column 'name' in 'field list' in C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\app\Controllers\Auth.php(28): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(933): App\Controllers\Auth->create()
+#10 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\index.php(60): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-08-31 08:49:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'name' in 'field list'
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (:name:, :email:, :role:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Auth.php(28): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(60): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-31 08:49:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', NULL, \'2025-08-31 08:49:33\', \'2025-08-31 08:49:33\', \'$2y$10$RyU0BgYnVc/8a3Okt6456ucB.g3UTQwdKCsh0WBsBlvLRGrluEZtO\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', NULL, \'2025-08-31 08:49:33\', \'2025-08-31 08:49:33\', \'$2y$10$RyU0BgYnVc/8a3Okt6456ucB.g3UTQwdKCsh0WBsBlvLRGrluEZtO\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (:name:, :email:, :role:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Auth.php(28): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(60): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-31 08:49:33 --> [Caused by] mysqli_sql_exception: Unknown column 'name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', NULL, \'2025-08-31 08:49:33\', \'2025-08-31 08:49:33\', \'$2y$10$RyU0BgYnVc/8a3Okt6456ucB.g3UTQwdKCsh0WBsBlvLRGrluEZtO\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', NULL, \'2025-08-31 08:49:33\', \'2025-08-31 08:49:33\', \'$2y$10$RyU0BgYnVc/8a3Okt6456ucB.g3UTQwdKCsh0WBsBlvLRGrluEZtO\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Kim Fernando\', \'cheya.eia30@gmail.com\', NULL, \'2025-08-31 08:49:33\', \'2025-08-31 08:49:33\', \'$2y$10$RyU0BgYnVc/8a3Okt6456ucB.g3UTQwdKCsh0WBsBlvLRGrluEZtO\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`name`, `email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (:name:, :email:, :role:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Auth.php(28): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(60): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-08-31 08:53:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-31 08:53:33 --> CSRF token verified.
+ERROR - 2025-08-31 08:53:33 --> mysqli_sql_exception: Unknown column 'password_hash' in 'field list' in C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\app\Controllers\Auth.php(28): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(933): App\Controllers\Auth->create()
+#10 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\index.php(60): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-08-31 08:53:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'password_hash' in 'field list'
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (:email:, :role:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Auth.php(28): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(60): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-31 08:53:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'password_hash' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'cheya.eia30@gmail.com\', NULL, \'2025-08-31 08:53:33\', \'2025-08-31 08:53:33\', \'$2y$10$YAqRIfKmjQtV8aX6Nt9NuexYUoqEyF3BQuUlAIUMJQAEMJjvzIXve\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'cheya.eia30@gmail.com\', NULL, \'2025-08-31 08:53:33\', \'2025-08-31 08:53:33\', \'$2y$10$YAqRIfKmjQtV8aX6Nt9NuexYUoqEyF3BQuUlAIUMJQAEMJjvzIXve\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (:email:, :role:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Auth.php(28): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(60): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-31 08:53:33 --> [Caused by] mysqli_sql_exception: Unknown column 'password_hash' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `users` (`email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'cheya.eia30@gmail.com\', NULL, \'2025-08-31 08:53:33\', \'2025-08-31 08:53:33\', \'$2y$10$YAqRIfKmjQtV8aX6Nt9NuexYUoqEyF3BQuUlAIUMJQAEMJjvzIXve\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'cheya.eia30@gmail.com\', NULL, \'2025-08-31 08:53:33\', \'2025-08-31 08:53:33\', \'$2y$10$YAqRIfKmjQtV8aX6Nt9NuexYUoqEyF3BQuUlAIUMJQAEMJjvzIXve\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (\'cheya.eia30@gmail.com\', NULL, \'2025-08-31 08:53:33\', \'2025-08-31 08:53:33\', \'$2y$10$YAqRIfKmjQtV8aX6Nt9NuexYUoqEyF3BQuUlAIUMJQAEMJjvzIXve\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`email`, `role`, `created_at`, `updated_at`, `password_hash`) VALUES (:email:, :role:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Auth.php(28): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(60): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-08-31 08:56:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-31 08:56:33 --> CSRF token verified.
+ERROR - 2025-08-31 08:56:34 --> mysqli_sql_exception: Column 'role' cannot be null in C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\app\Controllers\Auth.php(28): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(933): App\Controllers\Auth->create()
+#10 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\index.php(60): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-08-31 08:56:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'role' cannot be null
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`email`, `role`, `created_at`, `updated_at`) VALUES (:email:, :role:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Auth.php(28): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(60): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-31 08:56:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'role' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`email`, `role`, `created_at`, `updated_at`) VALUES (\'cheya.eia30@gmail.com\', NULL, \'2025-08-31 08:56:33\', \'2025-08-31 08:56:33\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`email`, `role`, `created_at`, `updated_at`) VALUES (\'cheya.eia30@gmail.com\', NULL, \'2025-08-31 08:56:33\', \'2025-08-31 08:56:33\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`email`, `role`, `created_at`, `updated_at`) VALUES (:email:, :role:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Auth.php(28): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(60): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-31 08:56:34 --> [Caused by] mysqli_sql_exception: Column 'role' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `users` (`email`, `role`, `created_at`, `updated_at`) VALUES (\'cheya.eia30@gmail.com\', NULL, \'2025-08-31 08:56:33\', \'2025-08-31 08:56:33\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`email`, `role`, `created_at`, `updated_at`) VALUES (\'cheya.eia30@gmail.com\', NULL, \'2025-08-31 08:56:33\', \'2025-08-31 08:56:33\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`email`, `role`, `created_at`, `updated_at`) VALUES (\'cheya.eia30@gmail.com\', NULL, \'2025-08-31 08:56:33\', \'2025-08-31 08:56:33\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`email`, `role`, `created_at`, `updated_at`) VALUES (:email:, :role:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Auth.php(28): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(60): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-08-31 08:58:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-31 08:58:50 --> CSRF token verified.
+ERROR - 2025-08-31 08:58:51 --> mysqli_sql_exception: Column 'role' cannot be null in C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\app\Controllers\Auth.php(28): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(933): App\Controllers\Auth->create()
+#10 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\WebSystem-ITE311\ITE311-ALCAYDE\index.php(60): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-08-31 08:58:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'role' cannot be null
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`email`, `role`, `created_at`, `updated_at`) VALUES (:email:, :role:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\Auth.php(28): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(60): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-31 08:58:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'role' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`email`, `role`, `created_at`, `updated_at`) VALUES (\'cheya.eia30@gmail.com\', NULL, \'2025-08-31 08:58:50\', \'2025-08-31 08:58:50\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`email`, `role`, `created_at`, `updated_at`) VALUES (\'cheya.eia30@gmail.com\', NULL, \'2025-08-31 08:58:50\', \'2025-08-31 08:58:50\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`email`, `role`, `created_at`, `updated_at`) VALUES (:email:, :role:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\Auth.php(28): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(60): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-31 08:58:51 --> [Caused by] mysqli_sql_exception: Column 'role' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `users` (`email`, `role`, `created_at`, `updated_at`) VALUES (\'cheya.eia30@gmail.com\', NULL, \'2025-08-31 08:58:50\', \'2025-08-31 08:58:50\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`email`, `role`, `created_at`, `updated_at`) VALUES (\'cheya.eia30@gmail.com\', NULL, \'2025-08-31 08:58:50\', \'2025-08-31 08:58:50\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`email`, `role`, `created_at`, `updated_at`) VALUES (\'cheya.eia30@gmail.com\', NULL, \'2025-08-31 08:58:50\', \'2025-08-31 08:58:50\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`email`, `role`, `created_at`, `updated_at`) VALUES (:email:, :role:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\Auth.php(28): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->create()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(60): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-08-31 09:00:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-31 09:01:05 --> CSRF token verified.
+DEBUG - 2025-08-31 09:01:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-31 09:07:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-31 09:09:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-31 09:10:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-31 09:12:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-31 09:12:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-31 09:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-31 09:12:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-31 09:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-31 09:13:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-31 09:16:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-31 09:18:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-31 09:21:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-31 09:22:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-31 09:27:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-31 09:29:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-31 09:30:07 --> CSRF token verified.
+DEBUG - 2025-08-31 09:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-31 09:33:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-31 09:40:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-31 09:40:32 --> CSRF token verified.
+DEBUG - 2025-08-31 09:40:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-31 09:43:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-31 09:46:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-31 09:50:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-31 09:51:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-31 09:52:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-08-31 23:13:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-08-31 23:14:32 --> CSRF token verified.
+DEBUG - 2025-08-31 23:14:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
