@@ -7,14 +7,24 @@
      <link rel="stylesheet" href="<?= base_url('css/bootstrap.min.css') ?>">
 </head>
 <body>
-    <?php if (session()->getFlashdata('error')): ?>
-          <div class="alert alert-danger">
-            <?= session()->getFlashdata('error') ?>
-          </div>
-    <?php endif; ?>
+  <?php if(session()->getFlashdata('error')): ?>
+        <div class="alert alert-danger">
+          <?= esc(session()->getFlashdata('error') )?>
+        </div>
+  <?php endif; ?>
+  <?php if(session()->getFlashdata('success')): ?>
+        <div class="alert alert-success">
+          <?= esc(session()->getFlashdata('success')) ?>
+        </div>
+  <?php endif; ?>
+  <?php if(isset($validation)): ?>
+        <div class="alert alert-danger">
+          <?= $validation->listErrors() ?>
+        </div>
+  <?php endif; ?>
 
-    <form action="<?= base_url('login/auth') ?>" method="post">
-        <?= csrf_field() ?>
+   <form action="<?= site_url('login') ?>" method="post">
+      <?= csrf_field() ?>
         <h1>Log In</h1>
       <div class="form-floating mb-3">
         <input type="email" name="email" class="form-control" id="floatingInput" required placeholder="email@example.com">

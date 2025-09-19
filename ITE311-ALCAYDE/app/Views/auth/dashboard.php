@@ -50,8 +50,8 @@
 </div>
   <div class="container mt-5">
   <div class="card p-4 shadow-sm">
-    <h3>Welcome, <?= esc(session()->get('username')) ?>!</h3>
-    <p>Your role is: <?= esc(session()->get('role')) ?></p>
+    <h3>Hello, <?= esc(session()->get('user_name')) ?>!</h3>
+    <p>Welcome Back Dear <?= esc(session()->get('user_role')) ?></p>
   </div>
 </div>
   <script src="<?= base_url('js/bootstrap.bundle.min.js') ?>"></script>
