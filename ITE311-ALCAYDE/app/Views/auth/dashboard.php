@@ -1,60 +1,123 @@
+<?= $this->include('templates/header') ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="<?= base_url('css/bootstrap.min.css') ?>">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard</title>
+  <style>
+       html,body{
+        margin: 0;
+        height: 100vh;
+        padding: 5px;
+        overflow: hidden;
+      }
+      .courses,
+      .assignments{
+        float: left;
+        width:30%;
+        height: 100%;
+        overflow: auto;
+        padding: 10px;
+        background-color: rgb(247, 245, 243);
+      }
+      .notifications,
+      .grading{
+        float: right;
+        overflow: auto;
+        width: 70%;
+        height: 100%;
+        padding: 10px;
+      }
+      .ass{
+        background-color: blue;
+        color: white;
+        padding: 5px;
+      }
+</style>
+    </style>
 </head>
 <body>
-   <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Home</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
-    aria-controls="navbarSupportedContent" 
-    aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Options
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Report</a></li>
-            <li><a class="dropdown-item" href="#">Settings</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="<?= base_url('logout') ?>">Logout</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Admin</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+    <?php if (session()->get('user_role') === 'teacher'): ?>
+      <div class="courses">
+        <h4>My Teached Courses</h4>
+        <ul class="list-group mb-4">
+        <?php foreach ($courses ?? [] as $c): ?>
+          <li class="list-group-item"><?= esc($c['title']) ?></li>
+        <?php endforeach; ?>
+       </ul>
+      <a href="<?= base_url('#') ?>" class="btn btn-primary">Add new Course</a>
+      </div>
+    <div class="notifications">
+      <h4>Notifications</h4>
+      <div class="alert alert-info">You have <?= esc($newAssignments ?? 0) ?> new assignments submitted.</div>
     </div>
-  </div>
-</nav>
-<div #id="kij" style="text-align: center; margin-top: 20px;">
-    <h1>Dashboard</h1>
-</div>
-  <div class="container mt-5">
-  <div class="card p-4 shadow-sm">
-    <h3>Hello, <?= esc(session()->get('user_name')) ?>!</h3>
-    <p>Welcome Back Dear <?= esc(session()->get('user_role')) ?></p>
-  </div>
-</div>
-  <script src="<?= base_url('js/bootstrap.bundle.min.js') ?>"></script>
+    <?php endif; ?>
+
+  <?php if (session()->get('user_role') === 'student'): ?>
+    <div class="assignments">
+        <h4 class="ass">Assignments</h4>
+        <ul class="list-group mb-4">
+          <?php foreach ($deadlines ?? [] as $d): ?>
+            <li class="list-group-item"><?= esc($d['course']) ?> - <?= esc($d['date']) ?></li>
+          <?php endforeach; ?>
+        </ul>
+    </div>
+
+    <div class="grading">
+      <h4>Recent Grades</h4>
+      <table class="table table-bordered">
+        <thead><tr><th>Course</th><th>Grade</th><th>Feedback</th></tr></thead>
+        <tbody>
+          <?php foreach ($grades ?? [] as $g): ?>
+            <tr>
+              <td><?= esc($g['course']) ?></td>
+              <td><?= esc($g['grade']) ?></td>
+              <td><?= esc($g['feedback']) ?></td>
+            </tr>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
+    </div>
+  <?php endif; ?>
+
+   <?php if (session()->get('user_role') === 'admin'): ?>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card text-bg-primary mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Total Users</h5>
+            <p class="card-text fs-3"><?= esc($totalUsers ?? 0) ?></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-bg-success mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Total Courses</h5>
+            <p class="card-text fs-3"><?= esc($totalCourses ?? 0) ?></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h4>Recent Activity</h4>
+    <table class="table table-striped">
+      <thead><tr><th>User</th><th>Action</th><th>Date</th></tr></thead>
+      <tbody>
+        <?php if (!empty($activities)): ?>
+          <?php foreach ($activities as $a): ?>
+            <tr>
+              <td><?= esc($a['user']) ?></td>
+              <td><?= esc($a['action']) ?></td>
+              <td><?= esc($a['created_at']) ?></td>
+            </tr>
+          <?php endforeach; ?>
+        <?php else: ?>
+          <tr><td colspan="3">No recent activity</td></tr>
+        <?php endif; ?>
+      </tbody>
+    </table>
+    <?php endif; ?>
 </body>
 </html>
-

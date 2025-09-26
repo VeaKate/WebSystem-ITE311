@@ -4,12 +4,6 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 
 class Auth extends Controller {
-    protected $database;
-    protected $table;
-    public function __construct() {
-        $this->database = \Config\Database::connect();
-        $this->table = $this->database->table('users');
-    }
 
     public function register() {
         helper(['form']);
@@ -24,7 +18,7 @@ class Auth extends Controller {
             ];
 
             if($this->validate($rules)) {
-                $role = $this->request->getPost('role') ?? 'user';
+                $role = 'admin';
                 $newData = [
                     'name' => $this->request->getPost('name'),
                     'email' => $this->request->getPost('email'),
@@ -33,8 +27,10 @@ class Auth extends Controller {
                     'created_at' => date('Y-m-d H:i:s'),
                     'updated_at' => date('Y-m-d H:i:s')
                 ];
-
-                if($this->table->insert($newData)) {
+                //teacher password: teacher1234
+                //admin password: admin1234
+                //student password password123
+                if(\Config\Database::connect()->table('users')->insert($newData)) {
                     $message['success'] = 'Registration successful. You can now log in.';
                     return redirect()->to(base_url('login'));
                 } else {
@@ -61,7 +57,8 @@ class Auth extends Controller {
                 $email = $this->request->getPost('email');
                 $password = $this->request->getPost('password');
 
-                $user = $this->table->where('email', $email)->get()->getRow();
+                $user =\Config\Database::connect()->table('users')
+                       ->where('email', $email)->get()->getRow();
 
                 if($user) {
                     if(password_verify($password, $user->password)) {
@@ -93,30 +90,12 @@ class Auth extends Controller {
              session()->setFlashdata('error', 'You must log in first!');
             return redirect()->to(base_url('login'));
         }
-
+      
         return view('auth/dashboard');
     }
 
     public function logout() {
         session()->destroy();
         return redirect()->to(base_url('login'));
-    }
-
-    public function dbfetch() {
-        $email = $this->request->getGet('email') ?? $this->request->getPost('email');
-        if(! $email) {
-            return $this->response->setStatusCode(400)->setBody('Email parameter is required');
-        }
-        $database = \Config\Database::connect();
-        $table = $database->table('users');
-        $user = $table->select('id, name, email, role, created_at, updated_at')
-                      ->where('email', $email)
-                      ->get()
-                      ->getRowArray();
-        if(! $user) {
-            return $this->response->setStatusCode(404)->setBody('User not found');
-        }
-        return $this->response->setContentType('application/json')
-                              ->setBody(json_encode($user));
     }
 }

@@ -1,3 +1,31 @@
+<?= $this->include('templates/header') ?>
+
+<style>
+  h2{
+    text-align: center;
+    transform:translateY(50%)
+  }
+</style>
+
+<h2 class="mb-4">This page is under development😥</h2>
+
+<!--<h4>My Courses</h4>
+<ul class="list-group mb-4">
+  <?php foreach ($courses ?? [] as $c): ?>
+    <li class="list-group-item"><?= esc($c['title']) ?></li>
+  <?php endforeach; ?>
+</ul>
+
+<h4>Notifications</h4>
+<div class="alert alert-info">You have <?= esc($newAssignments ?? 0) ?> new assignments submitted.</div>
+
+<a href="<?= base_url('/teacher/create') ?>" class="btn btn-primary">Create New Course</a>
+
+
+
+
+
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
