@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Page Not Found</title>
+    <style>
+        html, body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+        .cont1{
+            width: 100%;
+            text-align: center;
+            height: 100%;
+            display: block;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont1">
+        <h1>404</h1>
+        <img src="Sad Cry GIF.gif" alt="Sad Cry" style="width:400px; height:400px;">
+        <h2>Whoops... Looks like nothing is here!</h2>
+        <h4>We couldn't find that page!</h4>
+        <br><br><br>
+        <h1>Page Not Found</h1>
+    </div>
+</body>
+</html>

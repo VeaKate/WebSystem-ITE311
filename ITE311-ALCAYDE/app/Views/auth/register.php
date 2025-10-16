@@ -32,8 +32,17 @@
   <label for="floatingInput">Username</label>
 </div>
 <div class="form-floating mb-3">
-  <input name="email" type="email"  value="<?= set_value('email') ?>" required class="form-control" id="floatingInput" placeholder="name@example.com">
+  <input name="email" type="email" value="<?= set_value('email') ?>" required class="form-control" id="floatingInput" placeholder="name@example.com">
   <label for="floatingInput">Email</label>
+</div>
+<div class="form-floating mb-3">
+  <input name="role" type="text" list="roles" required class="form-control" id="floatingInput" placeholder="name@example.com">
+  <label for="floatingInput">Role</label>
+  <datalist id="roles">
+ <option value="admin">
+  <option value="teacher">
+  <option value="student">
+</datalist>
 </div>
 <div class="form-floating mb-3">
   <input name="password" type="password" name="password" required class="form-control" id="floatingInput" placeholder="name@example.com">

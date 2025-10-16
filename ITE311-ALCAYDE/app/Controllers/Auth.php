@@ -18,12 +18,11 @@ class Auth extends Controller {
             ];
 
             if($this->validate($rules)) {
-                $role = 'admin';
                 $newData = [
                     'name' => $this->request->getPost('name'),
                     'email' => $this->request->getPost('email'),
                     'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
-                    'role' => $role,
+                    'role' => $this->request->getPost('role'),
                     'created_at' => date('Y-m-d H:i:s'),
                     'updated_at' => date('Y-m-d H:i:s')
                 ];
@@ -39,6 +38,9 @@ class Auth extends Controller {
             } else {
                 $message['validation'] = $this->validator;
             }
+        }
+        if(session()->get('isLoggedIn')) {
+            return redirect()->to(base_url('dashboard'));
         }
         return view('auth/register', $message);
     }
@@ -81,6 +83,9 @@ class Auth extends Controller {
             } else {
                 $message['validation'] = $this->validator;
             }
+        }
+         if(session()->get('isLoggedIn')) {
+            return redirect()->to(base_url('dashboard'));
         }
         return view('auth/login', $message);
     }
