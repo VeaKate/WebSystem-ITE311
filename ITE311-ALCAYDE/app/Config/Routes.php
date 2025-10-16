@@ -27,7 +27,10 @@ $routes->get('/dashboard', 'Auth::dashboard');
 $routes->get('/dashboard', 'Auth::dashboard');
 $routes->get('/user-management', 'Home::userManagement');
 $routes->get('/course-management', 'Home::course_management');
-
 $routes->set404Override('App\Controllers\Home::notFound');
+/**
+ * midterm exam
+ */
+$routes->get('/announcement', 'Announcement::index');
 
 $routes->setAutoRoute(true);
