@@ -20,7 +20,7 @@ class Announcement extends Controller
         $session = session();
         $session->set('announcements', $announcements);
 
-        // Now, in your view, you can access session('announcements')
+        // render announcement.php filr from views 
         return view('announcement');
     }
 }

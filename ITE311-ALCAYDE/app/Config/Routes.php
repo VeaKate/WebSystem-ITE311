@@ -24,13 +24,15 @@ $routes->get('/dashboard', 'Auth::dashboard');
 /**
  * lab 5 ni sya dre
  */
-$routes->get('/dashboard', 'Auth::dashboard');
+/*$routes->get('/dashboard', 'Auth::dashboard');
 $routes->get('/user-management', 'Home::userManagement');
 $routes->get('/course-management', 'Home::course_management');
 $routes->set404Override('App\Controllers\Home::notFound');
 /**
  * midterm exam
  */
-$routes->get('/announcement', 'Announcement::index');
+$routes->get('/announcements', 'Announcement::index');
+$routes->get('/teacher/dashboard', 'Teacher::dashboard');
+$routes->get('/admin/dashboard', 'Admin::dashboard');
 
 $routes->setAutoRoute(true);
