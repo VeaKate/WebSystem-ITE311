@@ -31,8 +31,17 @@ $routes->set404Override('App\Controllers\Home::notFound');
 /**
  * midterm exam
  */
-$routes->get('/announcements', 'Announcement::index');
-$routes->get('/teacher/dashboard', 'Teacher::dashboard');
-$routes->get('/admin/dashboard', 'Admin::dashboard');
+// Apply the filter to the /admin group
+$routes->group('admin', ['filter' => 'roleauth:admin'], function($routes) {
+    $routes->get('dashboard', 'Admin::dashboard');  // Example route
+    // Add more /admin/* routes as needed
+});
+
+$routes->group('teacher', ['filter' => 'roleauth:teacher'], function($routes) {
+    $routes->get('dashboard', 'Teacher::Dashboard');   // Example route
+    // Add more /teacher/* routes as needed
+});
+
+$routes->get('announcements', 'Announcement::index');  // Anyone can access this
 
 $routes->setAutoRoute(true);

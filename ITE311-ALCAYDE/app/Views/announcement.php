@@ -31,6 +31,13 @@
                     <td colspan="3">No announcements found.</td>
                 </tr>
             <?php endif; ?>
+
+           <?php if (session()->getFlashdata('error')): ?>
+    <div class="alert alert-danger">
+        <?= session()->getFlashdata('error') ?>
+    </div>
+<?php endif; ?>
+
         </tbody>
     </table>
 </body>

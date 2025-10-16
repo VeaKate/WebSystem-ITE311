@@ -73,13 +73,14 @@ class Auth extends Controller {
                             'isLoggedIn' => true
                         ];
                         $session->set($sessionData);
-                        if(session()->get('isLoggedIn') && session()->get('user_role') === 'admin') {
-                                return redirect()->to(base_url('admin/dashboard'));
-
-                            } elseif (session()->get('isLoggedIn') && session()->get('user_role') === 'teacher') {
-                                return redirect()->to(base_url('teacher/dashboard'));
-                            } elseif (session()->get('isLoggedIn') && session()->get('user_role') === 'student') {
-                                return redirect()->to(base_url('announcements'));
+                         
+                        if ($user->role === 'admin') {
+                            return redirect()->to('/admin/dashboard');
+                        } elseif ($user->role === 'teacher') {
+                            return redirect()->to('/teacher/dashboard');
+                        } else {
+                            return redirect()->to('/announcements'); // for students
+                        }
                         }
                     } else {
                         session()->setFlashdata('error', 'Incorrect email or password.');
@@ -90,21 +91,19 @@ class Auth extends Controller {
             } else {
                 $message['validation'] = $this->validator;
             }
-        }
-        /* if(session()->get('isLoggedIn')) {
-            return redirect()->to(base_url('dashboard'));
-        } */
+        
         return view('auth/login', $message);
     }
 
-    public function dashboard() {
+
+   /* public function dashboard() {
         if(! session()->get('isLoggedIn')) {
              session()->setFlashdata('error', 'You must log in first!');
             return redirect()->to(base_url('login'));
         }
       
         return view('auth/dashboard');
-    }
+    }*/
 
     public function logout() {
         session()->destroy();
