@@ -9,5 +9,4 @@ class Teacher extends Controller {
     public function dashboard() {
         return view('teacher_dashboard');
     }
-
 }
