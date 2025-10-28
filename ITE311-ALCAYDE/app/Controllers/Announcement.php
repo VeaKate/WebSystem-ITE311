@@ -24,3 +24,7 @@ class Announcement extends Controller
         return view('announcement');
     }
 }
+
+
+
+

@@ -36,15 +36,6 @@
   <label for="floatingInput">Email</label>
 </div>
 <div class="form-floating mb-3">
-  <input name="role" type="text" list="roles" required class="form-control" id="floatingInput" placeholder="name@example.com">
-  <label for="floatingInput">Role</label>
-  <datalist id="roles">
- <option value="admin">
-  <option value="teacher">
-  <option value="student">
-</datalist>
-</div>
-<div class="form-floating mb-3">
   <input name="password" type="password" name="password" required class="form-control" id="floatingInput" placeholder="name@example.com">
   <label for="floatingInput">Password</label>
 </div>
@@ -53,7 +44,7 @@
   <label for="floatingInput">Confirm Password</label>
 </div>
 <p>Already have an Account? <a href="login">Login</a></p>
-    <button type="submit" class="btn btn-outline-success">Create Account</button>
+    <button type="submit" class="btn btn-outline-success" id="register">Create Account</button>
  </form>
   <script src="<?= base_url('js/bootstrap.bundle.min.js') ?>"></script>
 </body>
@@ -63,6 +54,9 @@
       display: grid;
       height: 100vh;
       place-items: center;
+   }
+   #register{
+    width: 100%;
    }
    .form-control{
     width: 300px;

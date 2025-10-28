@@ -17,6 +17,11 @@
           <?= esc(session()->getFlashdata('success')) ?>
         </div>
   <?php endif; ?>
+  <?php if(session()->getFlashdata('restricted')): ?>
+        <div class="alert alert-success">
+          <?= esc(session()->getFlashdata('restricted')) ?>
+        </div>
+  <?php endif; ?>
   <?php if(isset($validation)): ?>
         <div class="alert alert-danger">
           <?= $validation->listErrors() ?>
@@ -36,9 +41,9 @@
       </div>
       <br>
       <p>Don't have an account? <a href="register">Register</a></p>
-      <button  type="submit" class="btn btn-success">Login</button>
+      <button  type="submit" class="btn btn-success" id="login">Login</button>
     </form>
-    <script src="<?= base_url('js/bootstrap.bundle.min.js') ?>"></script>
+    <script src="<?= base_url('js/bootstrap.min.js') ?>"></script>
     </body>
 </html>
 
@@ -47,6 +52,9 @@
       display: grid;
       height: 100vh;
       place-items: center;
+   }
+   #login{
+    width: 100%;
    }
    .form-control{
     width: 300px;
